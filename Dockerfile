@@ -2,7 +2,7 @@ FROM maven:3.6-jdk-8 AS build
 
 WORKDIR /code
 
-COPY src /code/src
+COPY src /code/app/src
 COPY pom.xml /code/app
 RUN mvn -f /code/app/pom.xml clean install
 
