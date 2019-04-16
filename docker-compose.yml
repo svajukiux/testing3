@@ -9,8 +9,13 @@ services:
       - "80:5000"
     depends_on:
     - friendservice
+    volumes:
+    - .:/code
+    networks:
+    - mynet
   friendservice:
     build: ./Pirmas
+    command: python app.py
     ports:
     - 5000:5001
     networks:
