@@ -13,7 +13,7 @@ services:
     - mynet
   friendservice:
     build: ./Pirmas
-    command: python ./Pirmas/app.py
+    command: python app.py
     ports:
     - 5000:5001
     networks:
