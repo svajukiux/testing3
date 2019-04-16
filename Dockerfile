@@ -4,7 +4,7 @@ WORKDIR /code
 
 COPY src /code/src
 COPY pom.xml /code/app
-RUN mvn -f code/app/pom.xml clean install
+RUN mvn -f /code/app/pom.xml clean install
 
 FROM openjdk:8
 COPY --from= build /code/app/target/SpringWebServiceToDoList-0.0.1-SNAPSHOT.jar SpringWebServiceToDoList-0.0.1-SNAPSHOT.jar
