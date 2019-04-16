@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  springboot-docker-compose-app-container:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+      - "80:5000"
+    depends_on:
+    - friendservice
+  friendservice:
+    build: ./Pirmas
+    ports:
+    - 5000:5001
+    networks:
+    - mynet
+    
+networks:
+    mynet:
