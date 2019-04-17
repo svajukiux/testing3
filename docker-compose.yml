@@ -14,9 +14,9 @@ services:
   friendservice:
     build: ./Pirmas
     command: python app.py
-    ports:
     volumes:
     - .:/code
+    ports:
     - 5000:5001
     networks:
     - mynet
