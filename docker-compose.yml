@@ -15,7 +15,7 @@ services:
     build: ./Pirmas
     command: python app.py
     volumes:
-    - .:/code
+    - ./Pirmas:/code
     ports:
     - 5000:5001
     networks:
